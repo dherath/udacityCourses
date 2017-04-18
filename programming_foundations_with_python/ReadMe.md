@@ -1,1 +1,1 @@
-Contains code used for udacity online courses
+Contains code used for udacity online course Programming foundations with python
