@@ -5,6 +5,6 @@ public class CopyStrings{
 		greeting2.toUpperCase();
 		System.out.println("greeting 1 ->"+greeting);
 		System.out.println("greeting2 -> "+greeting2);
-		//there are no mutators of strings
+		//there are no mutators of strings 
 	}
 }
