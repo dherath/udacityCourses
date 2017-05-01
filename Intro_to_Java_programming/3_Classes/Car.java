@@ -13,4 +13,14 @@ public class Car
 		gasInTank+=amount;
 	}
 
+	public double getMilesDriven()
+	{
+		return milesDriven;
+	}
+
+	public double getGasInTank()
+	{
+		return gasInTank;
+	}
+
 }
