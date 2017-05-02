@@ -8,6 +8,7 @@ public class Person{
 	public Person(String aName){
 		name = aName;
 		friends="";
+		numberOfFriends = 0;
 	}
 
 	//-----------Method----------------
@@ -29,5 +30,9 @@ public class Person{
 		}else{
 			return name+" has no friends";
 		}
+	}
+
+	public int getNumberOfFriends(){
+		return numberOfFriends;
 	}
 }
