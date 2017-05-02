@@ -41,4 +41,9 @@ public class Person{
 		friend.addFriend(this);
 	}
 
+	public void mutualUnFriend(Person nonFriend){
+		this.unFriend(nonFriend);
+		nonFriend.unFriend(this);
+	}
+
 }
