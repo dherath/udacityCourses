@@ -35,4 +35,10 @@ public class Person{
 	public int getNumberOfFriends(){
 		return numberOfFriends;
 	}
+
+	public void makeMutualFriend(Person friend){
+		this.addFriend(friend);
+		friend.addFriend(this);
+	}
+
 }
