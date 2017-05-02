@@ -14,9 +14,9 @@ public class Car{
 
 	//---------------Methods-----------------------
 	public void drive(double distance){
-		milesDriven = milesDriven + distance;
-		double gasConsumed = distance/milesPerGallon;
-		gasInTank -=gasConsumed;
+		this.milesDriven = this.milesDriven + distance;
+		double gasConsumed = distance/this.milesPerGallon;
+		this.gasInTank -=gasConsumed;
 	}
 
 	//public void setMilesPerGalon(double amount){
@@ -24,7 +24,7 @@ public class Car{
 	//}
 
 	public void addGas(double amount){
-		gasInTank+=amount;
+		this.gasInTank+=amount;
 	}
 
 	public double getMilesDriven(){
