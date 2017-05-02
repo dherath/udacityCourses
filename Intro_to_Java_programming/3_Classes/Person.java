@@ -15,12 +15,12 @@ public class Person{
 		friends += friend.name + " ";
 	}
 
-	public void unfriend(Person nonFriend)
+	public void unFriend(Person nonFriend)
 	{
 		friends = friends.replace(nonFriend.name+" ","");
 	}
 
-	public String getfriends(){
+	public String getFriends(){
 		return friends;
 	}
 }
