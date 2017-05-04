@@ -5,7 +5,7 @@ public class WhatDayWillItBe
 {
     public static void main(String[] args)
     {
-        
+      
 
 
         // Please do not change the name of this variable
