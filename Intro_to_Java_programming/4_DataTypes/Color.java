@@ -61,6 +61,20 @@ public class Color
         return blue;
     }
 
+    /**
+	* Converts RGB to Grayscale
+	* @param red the red value is entered (0-255)
+	* @param green the green vlaue is enetered (0-255)
+	* @param blue the blue value is entered(0-255)
+	*/
+	public void turnGray(){
+		int temp = (int)(0.2126*red+0.7152*green+0.0722*blue); //Casted to int
+		this.red =temp;
+		this.green =temp;
+		this.blue =temp;
+	}
+
+
     // Color constants
 
     public static final Color RED = new Color(255, 0, 0);
