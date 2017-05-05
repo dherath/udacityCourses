@@ -52,6 +52,21 @@ public class Book
     }
 
     /**
+     * Gets the second sentence of this book.
+     * @return the second sentence (including the period) of this book.
+     */
+    public String getSecondSentence()
+    {
+        // TODO: Get the second sentence
+        // Locate the period of the first sentence
+        // Return the substring consisting of everything after that period up to
+        // the second period
+        int index1 = this.bookText.indexOf(".");
+        int index2 = this.bookText.indexOf(".",index1+1);
+        return this.bookText.substring(index1+1,index2+1);
+    }
+
+    /**
      * A method to help read the book out of the file.
      * You don't have to read this unless you want to.
      * the "try" and "catch" are java's way of dealing with
