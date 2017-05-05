@@ -37,7 +37,18 @@ public class Book
         //
         // Check the fact sheet. There is a String function
         // that can do this for you.
-        return 0;
+        return this.bookText.indexOf("Mad Hatter");
+    }
+
+    /**
+     * Gets the first sentence of this book.
+     * @return the first sentence (including the period) of this book.
+     */
+    public String getFirstSentence()
+    {
+        // TODO: Return the first sentence
+        int index = this.bookText.indexOf(".");
+        return this.bookText.substring(0,index+2);
     }
 
     /**
