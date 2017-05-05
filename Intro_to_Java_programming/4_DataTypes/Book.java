@@ -27,6 +27,20 @@ public class Book
     }
 
     /**
+    *   Finds where the string "Mad Hatter" occurs for the first time in the book.
+    *   @return the location of the first occurrence of the string
+    */
+
+    public int firstOccurrenceOfMadHatter()
+    {
+        // TODO: Complete this method
+        //
+        // Check the fact sheet. There is a String function
+        // that can do this for you.
+        return 0;
+    }
+
+    /**
      * A method to help read the book out of the file.
      * You don't have to read this unless you want to.
      * the "try" and "catch" are java's way of dealing with
