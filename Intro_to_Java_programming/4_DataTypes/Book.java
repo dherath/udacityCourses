@@ -67,6 +67,19 @@ public class Book
     }
 
     /**
+     *  Counts how many times "Alice" occurs in this book.
+     *  @return the number of occurrences
+     */
+    public int occurrencesOfAlice()
+    {
+        // TODO: Find the number of times the word "Alice" occurs in this book
+        String Alice = "Alice";
+        int temp = this.bookText.length() - this.bookText.replace("Alice","").length();
+        return temp/Alice.length();
+
+    }
+
+    /**
      * A method to help read the book out of the file.
      * You don't have to read this unless you want to.
      * the "try" and "catch" are java's way of dealing with
