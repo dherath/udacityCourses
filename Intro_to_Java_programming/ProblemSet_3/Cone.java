@@ -24,7 +24,7 @@ public class Cone
      */
     public double getVolume()
     {
-        double volume = (double)(1/3*Math.PI*Math.pow(this.r,2)*this.h);
+        double volume = (double)(Math.PI*Math.pow(this.r,2)*this.h/3);
         return volume;
         // TODO write the code to assign the volume of the cone to the variable volume. Use Math.PI
     }
@@ -32,7 +32,8 @@ public class Cone
     //----------------------------------------
     public static void main(String[] args) {
         Cone test = new Cone(3,5);
-        System.out.println("Volume = "+test.getVolume()+Math.PI+" "+r^2);
+        System.out.println("Volume = "+test.getVolume());
         System.out.println("Expected = 47.1238898");
+        //System.out.println(Math.pow(test.r,2));
     }
 }
