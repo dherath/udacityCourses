@@ -8,5 +8,9 @@ def naive(a,b):
 		x=x-1
 	return z
 
-print naive(3,4)
-print naive(3,120)
+def time(a):
+	#finds number of steps required for multiplication
+	return 2*a+3
+
+print "ans= ",naive(3,4)," steps= ",time(3)
+print "ans= ",naive(3,120)," steps= ",time(3)
