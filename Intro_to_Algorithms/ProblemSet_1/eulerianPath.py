@@ -20,14 +20,26 @@ def find_eulerian_tour(graph):
     graph.remove(initial)
     while start !=end :
     	for pair in graph :
-    		if pair[0]==end:
-    			path.append(pair[1])
-    			end =pair[1]
-    			graph.remove(pair)
+			if pair[0]==end:
+				end=pair[1]
+				path.append(end)
+				graph.remove(pair)
+			elif pair[1]==end:
+				end=pair[0]
+				path.append(end) 	
+				graph.remove(pair)
     return path
 
-print find_eulerian_tour([(3,1),(2,3),(1,2)])
-print find_eulerian_tour([(1,2),(3,4),(4,1),(2,3)])
+# test cases
+
+case1 = [(3,1),(2,3),(1,2)]
+case2 = [(1,2),(3,4),(4,1),(2,3)]
+case3 = [(1,2),(3,2),(1,3),(6,5),(3,6),(4,5),(3,4)]
+
+print find_eulerian_tour(case1)
+print find_eulerian_tour(case2)
+print find_eulerian_tour(case3)
+
 
 
 
