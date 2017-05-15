@@ -27,6 +27,7 @@ def find_eulerian_tour(graph):
     return path
 
 print find_eulerian_tour([(3,1),(2,3),(1,2)])
+print find_eulerian_tour([(1,2),(3,4),(4,1),(2,3)])
 
 
 
