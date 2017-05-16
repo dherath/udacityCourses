@@ -3,7 +3,8 @@ public class EqualNumbers{
 		double original = 2;
 		double root = Math.sqrt(original);
 		double rootSquared = root*root;
-		if (rootSquared==original){
+		final double EPSILON = 1e-12;
+		if (Math.abs(rootSquared-original)<EPSILON){
 			System.out.println("They are the same");
 		}else{
 			System.out.println("rootSquared is "+rootSquared);
