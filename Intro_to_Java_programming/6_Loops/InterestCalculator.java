@@ -7,7 +7,7 @@ public class InterestCalculator
 
         while (balance < 1000000)
         {
-            double interest = balance * .01;
+            double interest = balance * .1;
             balance = balance + interest;
             year++;
         }
