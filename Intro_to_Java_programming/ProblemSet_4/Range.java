@@ -13,7 +13,5 @@ public class Range
     public boolean inRange(int value)
     {
     	return value>=0 && value<=100;
-    
-
     }
 }
