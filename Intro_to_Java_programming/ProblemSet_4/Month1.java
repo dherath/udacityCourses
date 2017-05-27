@@ -2,7 +2,7 @@
  * Complete the method to determine if the parameter month is one of the summer
  * months, "June", "July", "August". Use a compound "if" statement.
  */
-public class Month
+public class Month1
 {
     /**
      * determine if the parameter is one of the summer
