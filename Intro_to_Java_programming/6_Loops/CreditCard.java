@@ -21,16 +21,7 @@ public class CreditCard
         // So that we don't accidentally change the credit card number,
         // make a copy called n. 
         long n = cardNumber;
-        
-        // TODO this is the code from the a previous video. You can use it
-        // as a starting point, but you will need to change a lot.
-        // Change this method so that it will calculate the sum of every
-        // second digit instead of all the digits, and then return this 
-        // special sum. 
-        // for example, if n is 12345, this method should return the sum 
-        // 5 + 3 + 1
-        // There are links to videos with hints above the submit button. 
-        // Use them if you want more inspiration.
+  
         int sum = 0;
         int count =0;
 
@@ -45,4 +36,36 @@ public class CreditCard
         }
         return sum;
     }
+
+    /**
+    * Calculates whether this CreditCard has a valid number.
+    * @return true if the number is valid, false if it's not.
+    */
+    public boolean isValid(){
+
+        long n = cardNumber;
+        int sum = 0;
+        int count = 0;
+
+        while (n > 0)
+        {
+            int digit = (int)(n % 10); 
+
+            if (count%2==0){
+                sum += digit;    
+            }else if( digit < 5){
+                sum += 2*digit; 
+            }else{
+                sum += 2*digit - 9;
+            }
+            
+            count++;
+            n = n/10;
+        }
+        if(sum%10==0){
+            return true;
+        }else{
+            return false;
+        }
+    }    
 }
