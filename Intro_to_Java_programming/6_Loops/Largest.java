@@ -4,13 +4,19 @@
 // not a number). Print out the largest value that
 // the user entered.
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Largest
 {
     public static void main(String[] args)
+    throws FileNotFoundException 
     {
-        Scanner in = new Scanner(System.in);
+        String filename= "input.txt";
+        File inputFile = new File(filename);
+        //-------
+        Scanner in = new Scanner(inputFile);
         System.out.println("Enter values, Q to quit: ");
         double largest = in.nextDouble();
         if (in.hasNextDouble()){
