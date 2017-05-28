@@ -6,28 +6,26 @@ import java.util.Scanner;
 
 public class AverageDemo
 {
-    public static void main(String[] args)
-    {
-        Scanner in = new Scanner(System.in);
-        int count = 0;
-        double sum = 0;
-        double temp;
-        
+	public static void main(String[] args)
+	{
+		Scanner input = new Scanner(System.in);
+		int count = 0;
+		double sum = 0;
+		double temp;
+		
 
-        // TODO: Collect values from the user until they enter a 0.
-        // Track the sum of all the inputs so you can calculate the
-        // average at the end
+		// TODO: Collect values from the user until they enter a 0.
+		// Track the sum of all the inputs so you can calculate the
+		// average at the end
+		System.out.print("Enter a value, q to quit: "); 
+		while(input.hasNextDouble()){
+			temp=input.nextDouble();
+			sum+=temp;
+			count++;
+			System.out.print("Enter a value, q to quit: ");    
+	    }
 
-        do{
-           System.out.print("Enter a value, 0 to quit: "); 
-           temp=in.nextDouble();
-           if(temp!=0){
-               sum+=temp;
-               count++;            
-           }
-       }while(temp!=0);
-
-        double average = sum / count;
-        System.out.printf("Average: %.2f\n", average);
-    }
+		double average = sum / count;
+		System.out.printf("Average: %.2f\n", average);
+	}
 }
