@@ -5,9 +5,9 @@ public class InputValidation{
 		int value;
 		Scanner in = new Scanner(System.in);
 		do{
-			System.out.println("enter integer < 100 :");
+			System.out.print("enter integer between 0 & 100 inclusive : ");
 			value=in.nextInt();
-		}while (value>=100);
+		}while (value>100 || value<0);
 		System.out.println("Thank you for entering "+value);
 	}
 }
