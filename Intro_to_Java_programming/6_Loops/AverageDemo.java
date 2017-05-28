@@ -24,8 +24,11 @@ public class AverageDemo
 			count++;
 			System.out.print("Enter a value, q to quit: ");    
 	    }
-
-		double average = sum / count;
-		System.out.printf("Average: %.2f\n", average);
+	    if(count==0){
+	    	System.out.println("Error, no values");
+	    }else{
+			double average = sum / count;
+			System.out.printf("Average: %.2f\n", average);	    	
+	    }
 	}
 }
