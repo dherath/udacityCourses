@@ -1,25 +1,70 @@
-//Complete the method to return the number of non-vowels in the parameter
-//Assume the vowels are  a,e,i,o,u or A, E, I, O, U
+//Translate the following pseudocode for randomly permuting the characters in
+//a string into a method in the given Java class.
 
+//Read a word.
+//Repeat word.length() times
+//   Pick a random position i in the word, but not the last position.
+//   Pick a random position j > i in the word. (this is tricky)
+//   Swap the letters at positions j and i.
+//Print the word.
+
+//To swap the letters, construct substrings as follows:
+//  http://i.imgur.com/re4bGPu.png
+
+//Create and return the string:
+//   first + word.substring(j, j + 1) + middle
+//         + word.substring(i, i + 1) + last
+
+// Need help starting this question? In the lesson titled 
+// "Starting points: Problem Set Questions", go to the
+// problem titled "Problem Set 5 - Question 2" for some tips on 
+// how to begin.
+
+//I recommend that you implement and test the swapping before implementing
+//the loop. If something is wrong in the swap, it will be much more difficult
+//to find it you have executed the swap many times. That is an example of
+//step-wise refinement. Code a little, test, code a little more.
+
+import java.util.Random;
+/**
+* 
+ */
 public class Word
 {
-    /**
-     * Gets the number of non-vowels in the parameter
-     * @param word the string to count the non-vowels in
-     * @return the number of non-vowels in the word
-     */
-    public int nonVowelCount(String word)
-    {
-        //TODO Write the code to return the number of non-vowels
-        int vowelCount =0;
-        String vowels = "aeiou";
-        for(int i=0;i<word.length();i++)
-        {
-            if(vowels.contains(word.toLowerCase().substring(i,i+1)))
-            {
-                vowelCount++;
-            }
-        }
-        return word.length()-vowelCount;
+   private Random generator = new Random();
+
+   public Word()  //leave the constructor alone
+   {
+        generator = new Random();
+        final long SEED = 42;
+        generator.setSeed(SEED);
+   }
+   /**
+    * Gets a version of this word with the leters scrambled
+    * @param word the string to scramble
+    * @return the scrabled string
+    */
+   public String scramble(String word)
+   {
+    //TODO scramble the letters following the pseudocode
+    int i,j;
+    String first,middle,last;
+
+    for(int n=0;n<word.length();n++){
+      i = generator.nextInt(word.length()-2);
+      j = generator.nextInt(word.length()-(i+2))+(i+1);
+
+      first=word.substring(0,i);
+      middle=word.substring(i+1,j);
+      last=word.substring(j+1,word.length());
+
+      word = first + word.substring(j,j+1) + middle + word.substring(i,i+1) + last;
     }
+      return word;
+   }
+
+  public static void main(String[] args) {
+    Word temp = new Word();
+    System.out.println("dinal "+temp.scramble("dinal"));
+  }
 }
