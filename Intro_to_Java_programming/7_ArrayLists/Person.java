@@ -61,4 +61,35 @@ public class Person
     {
         return friendsList.size();
     }
+
+    /**
+     * Removes nonFriend from the list of friends.
+     * @param nonFriend the friend to remove
+     */
+    public void unfriend(Person nonFriend)
+    {
+        int index = find(nonFriend);
+        if(index>0){
+            friendsList.remove(index);            
+        }
+    }
+
+
+    /**
+     * Finds friend in the friends list
+     * @param a person to search for
+     * @return -1 if the person is not found. The index of the person otherwise.
+     */
+    public int find(Person friend)
+    {
+        for (int i = 0; i < friendsList.size(); i++)
+        {
+            if (friendsList.get(i).equals(friend))
+            {
+                return i;
+            }
+        }
+        // If the person is not found by the end of the friends list
+        return -1;
+    }
 }
