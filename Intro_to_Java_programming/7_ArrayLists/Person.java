@@ -10,14 +10,12 @@ import java.util.ArrayList;
 public class Person
 {
     private String name;
-    private String friends;
     private ArrayList<String> friendsList;
     private static final String SEPARATOR = ", ";
 
     public Person(String name)
     {
         this.name = name;
-        this.friends = "";
         this.friendsList = new ArrayList<String>();
     }
 
@@ -27,7 +25,6 @@ public class Person
      */
     public void addFriend(Person friend)
     {
-        friends = friends + friend.name + SEPARATOR;
         friendsList.add(friend.name);
     }
 
