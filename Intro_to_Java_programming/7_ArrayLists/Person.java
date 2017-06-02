@@ -33,10 +33,14 @@ public class Person
      * @return the names of the friends separated by a comma and a space.
      *     e.g. "Sara, Cheng-Han, Cay"
      */
-    public String getFriends()
+    public String getFriends(String seperator)
     {
-        String allFriends =  friendsList.toString();
-        return allFriends.substring(1,allFriends.length()-1);
+        String output="";
+        for(String name: friendsList){
+            output += name + seperator;
+        }
+        output = output.substring(0,output.length()-1);
+        return output;
     }
 
     /**

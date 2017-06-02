@@ -20,7 +20,6 @@ public class BookListDemo
 
         booksToRead.add(2,anotherBook);
 
-
         // Please don't modify the following line:
         System.out.println(booksToRead);
     }

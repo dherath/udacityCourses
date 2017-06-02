@@ -8,7 +8,8 @@ public class PersonTest{
 		sara.addFriend(dinal);
 		sara.addFriend(ann);
 
-		System.out.println("saras friends -> "+sara.getFriends());
+		System.out.println("saras friends -> "+sara.getFriends(","));
+		System.out.println("saras friends -> "+sara.getFriends("-"));		
 		System.out.println("saras newest friend -> "+sara.getFriend(2));
 		// sara.unFriend(dinal);
 		// sara.unFriend(chang);
