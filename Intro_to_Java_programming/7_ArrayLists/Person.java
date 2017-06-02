@@ -38,14 +38,6 @@ public class Person
      */
     public String getFriends()
     {
-        // if (friends.length() == 0) 
-        // {
-        //     return "";
-        // }
-        // else
-        // {
-        //     return friends.substring(0, friends.length() - SEPARATOR.length());
-        // }
         String allFriends =  friendsList.toString();
         return allFriends.substring(1,allFriends.length()-1);
     }
@@ -57,17 +49,6 @@ public class Person
      */
     public String getFriend(int friendIndex)
     {
-        int start = 0;
-        // Skip to the beginning of the name with the given index
-        for (int i = 0; i < friendIndex; i++)
-        {
-            int separatorIndex = friends.indexOf(SEPARATOR, start);
-            if (separatorIndex == -1) { return ""; }
-            start = separatorIndex + SEPARATOR.length();
-        }
-        int nextSeparatorIndex = friends.indexOf(SEPARATOR, start);
-        return friends.substring(start, nextSeparatorIndex);
-
-
+        return friendsList.get(friendIndex);
     }
 }
