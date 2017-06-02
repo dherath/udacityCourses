@@ -8,6 +8,8 @@ public class PersonTest{
 		sara.addFriend(dinal);
 		sara.addFriend(ann);
 
+		chang.addFriend(sara);
+
 		System.out.println("saras friends -> "+sara.getFriends(","));
 		System.out.println("saras friends -> "+sara.getFriends("-"));		
 		System.out.println("saras newest friend -> "+sara.getFriend(2));
@@ -17,6 +19,9 @@ public class PersonTest{
 
 		sara.talkTo(ann);
 		System.out.println("saras friends now(after talkTo()) -> "+sara.getFriends(" , "));
+
+		sara.removeMeanFriends();
+		System.out.println("saras real friends -> "+sara.getFriends(" , "));		
 
 		// sara.unFriend(dinal);
 		// sara.unFriend(chang);

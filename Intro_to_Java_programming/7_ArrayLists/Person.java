@@ -105,4 +105,18 @@ public class Person
         Person temp = friendsList.remove(index);
         friendsList.add(0,temp);
     }
+
+    /**
+     * Removes unrequited friendships. All Persons who do not have this
+     * Person as a friend, are removed from this Person's friend list.
+     */
+    public void removeMeanFriends()
+    {
+        for (Person friend : friendsList){
+            if (friend.find(this) == -1){
+                friendsList.remove(friend);
+            }
+        }    
+    }
+
 }
