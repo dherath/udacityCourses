@@ -28,6 +28,7 @@ public class Person
     public void addFriend(Person friend)
     {
         friends = friends + friend.name + SEPARATOR;
+        friendsList.add(friend.name);
     }
 
     /**
@@ -37,14 +38,16 @@ public class Person
      */
     public String getFriends()
     {
-        if (friends.length() == 0) 
-        {
-            return "";
-        }
-        else
-        {
-            return friends.substring(0, friends.length() - SEPARATOR.length());
-        }
+        // if (friends.length() == 0) 
+        // {
+        //     return "";
+        // }
+        // else
+        // {
+        //     return friends.substring(0, friends.length() - SEPARATOR.length());
+        // }
+        String allFriends =  friendsList.toString();
+        return allFriends.substring(1,allFriends.length()-1);
     }
 
     /**
@@ -64,5 +67,7 @@ public class Person
         }
         int nextSeparatorIndex = friends.indexOf(SEPARATOR, start);
         return friends.substring(start, nextSeparatorIndex);
+
+
     }
 }
