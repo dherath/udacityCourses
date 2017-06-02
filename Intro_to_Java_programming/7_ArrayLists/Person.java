@@ -48,4 +48,13 @@ public class Person
     {
         return friendsList.get(friendIndex);
     }
+
+    /**
+     * Gets the number of friends this Person has.
+     * @return the number of friends.
+     */
+    public int getNumFriends()
+    {
+        return friendsList.size();
+    }
 }
