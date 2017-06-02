@@ -14,6 +14,10 @@ public class PersonTest{
 
 		sara.unfriend(dinal);
 		System.out.println("saras friends now -> "+sara.getFriends(" , "));
+
+		sara.talkTo(ann);
+		System.out.println("saras friends now(after talkTo()) -> "+sara.getFriends(" , "));
+
 		// sara.unFriend(dinal);
 		// sara.unFriend(chang);
 		// System.out.println("saras friends -> "+sara.getFriends());

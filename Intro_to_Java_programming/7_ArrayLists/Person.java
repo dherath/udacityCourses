@@ -92,4 +92,17 @@ public class Person
         // If the person is not found by the end of the friends list
         return -1;
     }
+
+    /**
+     * When a person talks to some one, if that person is already
+     * a friend, they move to the front of the list. Otherwise nothing
+     * changes.
+     * @param the person to potentially move to the front of the friends list.
+     */
+    public void talkTo(Person person)
+    {
+        int index = find(person);
+        Person temp = friendsList.remove(index);
+        friendsList.add(0,temp);
+    }
 }
