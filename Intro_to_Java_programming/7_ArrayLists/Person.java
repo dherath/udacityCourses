@@ -4,16 +4,21 @@
 // Change the friends variable to store an ArrayList<String>
 // that contains the names of the friends.
 // Re-implement the addFriend and getFriends methods.
+
+import java.util.ArrayList;
+
 public class Person
 {
     private String name;
     private String friends;
+    private ArrayList<String> friendsList;
     private static final String SEPARATOR = ", ";
 
     public Person(String name)
     {
         this.name = name;
         this.friends = "";
+        this.friendsList = new ArrayList<String>();
     }
 
     /**
