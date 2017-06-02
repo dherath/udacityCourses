@@ -10,13 +10,13 @@ import java.util.ArrayList;
 public class Person
 {
     private String name;
-    private ArrayList<String> friendsList;
+    private ArrayList<Person> friendsList;
     private static final String SEPARATOR = ", ";
 
     public Person(String name)
     {
         this.name = name;
-        this.friendsList = new ArrayList<String>();
+        this.friendsList = new ArrayList<Person>();
     }
 
     /**
@@ -25,7 +25,7 @@ public class Person
      */
     public void addFriend(Person friend)
     {
-        friendsList.add(friend.name);
+        friendsList.add(friend);
     }
 
     /**
@@ -36,8 +36,8 @@ public class Person
     public String getFriends(String seperator)
     {
         String output="";
-        for(String name: friendsList){
-            output += name + seperator;
+        for(Person friend: friendsList){
+            output += friend.name + seperator;
         }
         output = output.substring(0,output.length()-seperator.length());
         return output;
@@ -50,7 +50,7 @@ public class Person
      */
     public String getFriend(int friendIndex)
     {
-        return friendsList.get(friendIndex);
+        return friendsList.get(friendIndex).name;
     }
 
     /**
