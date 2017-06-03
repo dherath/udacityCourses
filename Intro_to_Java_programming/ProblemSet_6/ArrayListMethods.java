@@ -111,7 +111,8 @@ public class ArrayListMethods
 	String temp;
         for(String word:list){
 	    temp = word.substring(0,1).toLowerCase();
-	    if(temp.compareTo("x")==0 || temp.compareTo("y")==0 || temp.compareTo("z")==0){
+	    if(temp.compareTo("x")==0 || temp.compareTo("y")==0 || temp.compareTo
+("z")==0){
 		list.add(insertAt,word);
 		insertAt++;
 	    }
