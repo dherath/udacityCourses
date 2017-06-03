@@ -48,30 +48,30 @@ public class ArrayListMethodsTester
         System.out.println("Expected: 3");
         
         
-        // //start with fresh array list
-        // animals = new ArrayList<String>();
-        // zoo = new ArrayListMethods(animals); 
+        //start with fresh array list
+        animals = new ArrayList<String>();
+        zoo = new ArrayListMethods(animals); 
         
-        // //does empty array list work?
-        //  System.out.println(zoo.isSorted());
-        //  System.out.println("Expected: true");
-        //  zoo.replaceWithLargerNeighbor();
-        //  System.out.println(zoo.toString());
-        //  System.out.println("Expected: []");
-        //  System.out.println(zoo.countDuplicates());
-        //  System.out.println("Expected: 0");
+        //does empty array list work?
+         System.out.println(zoo.isSorted());
+         System.out.println("Expected: true");
+         zoo.replaceWithLargerNeighbor();
+         System.out.println(zoo.toString());
+         System.out.println("Expected: []");
+         System.out.println(zoo.countDuplicates());
+         System.out.println("Expected: 0");
         
-        // //test xyzToFront
-        // zoo.list.add("ape");
-        // zoo.list.add("dog");
-        // zoo.list.add("xantus");
-        // zoo.list.add("zebra");
-        // zoo.list.add("cat");
-        // zoo.list.add("yak");
+        //test xyzToFront
+        zoo.list.add("ape");
+        zoo.list.add("dog");
+        zoo.list.add("xantus");
+        zoo.list.add("zebra");
+        zoo.list.add("cat");
+        zoo.list.add("yak");
         
-        // zoo.xyzToFront();
-        // System.out.println(zoo.toString());
-        // System.out.println("Expected: [xantus, zebra, yak, ape, dog, cat]");
+        zoo.xyzToFront();
+        System.out.println(zoo.toString());
+        System.out.println("Expected: [xantus, zebra, yak, ape, dog, cat]");
         
 
     }

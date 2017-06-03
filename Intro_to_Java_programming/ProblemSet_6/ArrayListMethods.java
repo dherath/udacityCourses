@@ -108,9 +108,14 @@ public class ArrayListMethods
     public void xyzToFront()
     {
         int insertAt = 0;
-
-        // TODO:  Move any word that starts with x, y, or z to the front of the ArrayList, but otherwise preserves the order
-
+	String temp;
+        for(String word:list){
+	    temp = word.substring(0,1).toLowerCase();
+	    if(temp.compareTo("x")==0 || temp.compareTo("y")==0 || temp.compareTo("z")==0){
+		list.add(insertAt,word);
+		insertAt++;
+	    }
+	}
     }
 
     /**
