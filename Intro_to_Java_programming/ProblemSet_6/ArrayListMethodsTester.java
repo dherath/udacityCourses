@@ -38,14 +38,14 @@ public class ArrayListMethodsTester
         System.out.println(zoo.toString());
         System.out.println("Expected: [cat, dog, horse, zebra, zebra]");
         
-        // zoo.list.add(0,"cat");
+        zoo.list.add(0,"cat");
         
-        // //test count duplicates;
-        // System.out.println(zoo.countDuplicates());
-        // System.out.println("Expected: 2");
-        // zoo.list.add(4,"dog");
-        // System.out.println(zoo.countDuplicates());
-        // System.out.println("Expected: 3");
+        //test count duplicates;
+        System.out.println(zoo.countDuplicates());
+        System.out.println("Expected: 2");
+        zoo.list.add(4,"dog");
+        System.out.println(zoo.countDuplicates());
+        System.out.println("Expected: 3");
         
         
         // //start with fresh array list
