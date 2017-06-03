@@ -56,6 +56,23 @@ public class ArrayListMethods
     {
 
         // TODO: Replace all but the first and last elements with the larger of its two neighbors
+        ArrayList<String> temp = new ArrayList<String>();
+        if(this.isSorted()){
+        	for(int i=1;i<list.size()-1;i++){
+        		list.add(i,list.get(i+1));
+        	}
+        }else{
+        	temp.add(list.get(0));
+        	for(int i=1;i<list.size()-1;i++){
+        		if(list.get(i-1).toLowerCase().compareTo(list.get(i+1).toLowerCase())>0){
+        			temp.add(list.get(i-1));
+        		}else{
+        			temp.add(list.get(i+1));
+        		}
+        	}
+        	temp.add(list.get(list.size()-1));
+        }
+        list = temp;
 
     }
 

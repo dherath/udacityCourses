@@ -31,12 +31,12 @@ public class ArrayListMethodsTester
         
         
         
-        // zoo.list.add(3,"horse");
+        zoo.list.add(3,"horse");
         
-        // //test replaceWithLargerNeighbor
-        // zoo.replaceWithLargerNeighbor();
-        // System.out.println(zoo.toString());
-        // System.out.println("Expected: [cat, dog, horse, zebra, zebra]");
+        //test replaceWithLargerNeighbor
+        zoo.replaceWithLargerNeighbor();
+        System.out.println(zoo.toString());
+        System.out.println("Expected: [cat, dog, horse, zebra, zebra]");
         
         // zoo.list.add(0,"cat");
         
