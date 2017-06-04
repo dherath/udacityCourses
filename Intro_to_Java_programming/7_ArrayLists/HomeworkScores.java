@@ -74,6 +74,26 @@ public class HomeworkScores
     }
 
     /**
+     * Finds the index of the lowest score.
+     * @return the index of the lowest score.
+     */
+    public int getLowScoreIndex()
+    {
+        // TODO: Find and return the index of the lowest score in scores.
+        double lowestSoFar = scores[0];
+	int lowestIndex =0;
+        for (int i = 1; i < currentSize; i++)
+        {
+            if (scores[i] < lowestSoFar)
+            {
+                lowestSoFar = scores[i];
+		lowestIndex = i;
+            }
+        }
+        return lowestIndex;	
+    }
+
+    /**
      * Removes the lowest score.
      */
     public void removeLowest()
