@@ -29,9 +29,9 @@ public class HomeworkScores
         // Use the scanner passed in in the argument userInput.
         // Save each score that is read in the partially filled scores array.
         // Make sure not to lose track of how filled the array is.
-	System.out.println("Enter score, Q to quit:");
-	while(userInput.hasNextdouble()) {
-	    scores[currentSize] = userInput;
+	while(userInput.hasNextDouble()) {
+	    double inputValue = userInput.nextDouble();
+	    scores[currentSize] = inputValue;
 	    currentSize++;
 	    if (currentSize==maxScores) {
 		maxScores *= 2;
@@ -53,11 +53,26 @@ public class HomeworkScores
 	for (double temp : scores) {
 	    val += temp;
 	}
-
 	return val;
-   
     }
 
+    /**
+     * Calculates the average of all the scores collected so far.
+     * @return the average of the scores in scores.
+     */
+    public double averageScore()
+    {
+        // TODO: Calculate the average score.
+        // Add up all the scores and divide by the number of scores.
+        // return the result.
+	double avgVal = 0;
+	if (currentSize!=0){
+	    avgVal =(double) (this.sumScores()/currentSize);
+	}
+        return avgVal;
+	
+    }
+    
     /**
      * Builds an easy-to-read description of the scores in the object.
      * @return A description of the scores.
