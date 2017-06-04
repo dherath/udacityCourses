@@ -90,7 +90,15 @@ public class ArrayMethods
 	//     }
 	// }
         // return duplicates;
-	    
+	int duplicates = 0;
+	for (int i=0;i<list.length-1;i++) {
+	    for (int j=i+1; j<list.length;j++){
+		if(list[i].toLowerCase().compareTo(list[j].toLowerCase())==0){
+		    duplicates++;
+		}
+	    }
+	}
+	return duplicates;
     }
 
     /**
