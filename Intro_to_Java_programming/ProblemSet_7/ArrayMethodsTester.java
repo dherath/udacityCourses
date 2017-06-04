@@ -12,16 +12,16 @@ public class ArrayMethodsTester
         System.out.println(zoo.toString());
         System.out.println("Expected: [cat, dog, horse, zebra, zebra]");
         
-        // //test count duplicates;
-        // String[] animals2 = {"cat", "cat", "dog", "horse", "zebra", "zebra"};
-        // zoo = new ArrayMethods(animals2);
-        // System.out.println(zoo.countDuplicates());
-        // System.out.println("Expected: 2");
+        //test count duplicates;
+        String[] animals2 = {"cat", "cat", "dog", "horse", "zebra", "zebra"};
+        zoo = new ArrayMethods(animals2);
+        System.out.println(zoo.countDuplicates());
+        System.out.println("Expected: 2");
        
-        // String[] animals3 = {"dog", "cat", "cat", "dog", "horse", "zebra", "zebra"};
-        // zoo = new ArrayMethods(animals3);
-        // System.out.println(zoo.countDuplicates());
-        // System.out.println("Expected: 3");        
+        String[] animals3 = {"dog", "cat", "cat", "dog", "horse", "zebra", "zebra"};
+        zoo = new ArrayMethods(animals3);
+        System.out.println(zoo.countDuplicates());
+        System.out.println("Expected: 3");        
         
         // String[] animals4 = {"ape", "dog", "xantus",  "zebra", "cat", "yak"};
         // zoo = new ArrayMethods(animals4);

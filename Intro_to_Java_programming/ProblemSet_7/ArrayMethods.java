@@ -74,9 +74,23 @@ public class ArrayMethods
      */
     public int countDuplicates()
     {
-        int duplicates = 0;
-
-        return duplicates;
+        // int duplicates = 0;
+	// int count;
+	// String[] tempList = list;
+	// for (int i=0;i<tempList.length-1;i++){
+	//     count =0;
+	//     for (int j=1;j<tempList.length;j++){
+	// 	if (list[i].toLowerCase().compareTo(tempList[j].toLowerCase())==0){
+	// 	    count++;
+	// 	    tempList[j]="";
+	// 	}
+	//     }
+	//     if(count>0){
+	// 	duplicates++;
+	//     }
+	// }
+        // return duplicates;
+	    
     }
 
     /**
@@ -95,6 +109,7 @@ public class ArrayMethods
      */
     public String toString()
     {
-        return list.toString();
+        return Arrays.toString(list);
+	
     }
 }
