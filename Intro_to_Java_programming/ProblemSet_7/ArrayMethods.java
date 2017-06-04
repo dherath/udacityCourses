@@ -108,7 +108,18 @@ public class ArrayMethods
     public void xyzToFront()
     {
         int insertAt = 0;
-
+	for (int i = 0 ; i < list.length ; i++) {
+	    String temp = list[i].toLowerCase().substring(0,1);
+	    if(temp.compareTo("x")==0 || temp.compareTo("y")==0 || temp.compareTo("z")==0) {
+		String word = list[i];
+		for (int j=i;j>insertAt;j--){
+		    list[j]=list[j-1];
+		}
+		list[insertAt] = word;
+		insertAt++;
+	    }
+	}
+	    
     }
 
     /**

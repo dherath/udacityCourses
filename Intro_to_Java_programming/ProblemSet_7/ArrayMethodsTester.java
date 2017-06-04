@@ -23,11 +23,11 @@ public class ArrayMethodsTester
         System.out.println(zoo.countDuplicates());
         System.out.println("Expected: 3");        
         
-        // String[] animals4 = {"ape", "dog", "xantus",  "zebra", "cat", "yak"};
-        // zoo = new ArrayMethods(animals4);
-        // zoo.xyzToFront();
-        // System.out.println(zoo.toString());
-        // System.out.println("Expected: [xantus, zebra, yak, ape, dog, cat]");
+        String[] animals4 = {"ape", "dog", "xantus",  "zebra", "cat", "yak"};
+        zoo = new ArrayMethods(animals4);
+        zoo.xyzToFront();
+        System.out.println(zoo.toString());
+        System.out.println("Expected: [xantus, zebra, yak, ape, dog, cat]");
         
     }
 }
