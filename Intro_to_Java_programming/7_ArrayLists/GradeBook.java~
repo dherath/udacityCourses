@@ -30,33 +30,8 @@ public class GradeBook
     public double totalForStudent(int studentIndex)
     {
         //TODO: Return the total of all the scores for the student in row studentIndex
-	if (studentIndex <0 || studentIndex >= numStudents){
-	    return -1;
-	}
-	double sum = 0;
-	for (int column = 0 ; column < numTopics; column++){
-	    sum += grades[studentIndex][column];
-	}
-	return sum;
+        return 0;
     }
-
-    /**
-     * Calculates the totals for all the students and returns the results
-     * in a completely filled array.
-     * @return a filled array of the total for each student.
-     */
-    public double[] totalsForAllStudents()
-    {
-        //TODO: implement this method.
-	double[] totalGrades = new double[numStudents];
-	for (int n=0 ; n < numStudents ; n++){
-	    totalGrades[n] = 0;
-	    for (int topics=0; topics < numTopics ; topics++) {
-		totalGrades[n] += grades[n][topics];
-	    }
-	}
-	return totalGrades;
-    } 
 
     //This method reads the scores from the file. Don't look inside.
     private void readScoresFromFile(String file)
