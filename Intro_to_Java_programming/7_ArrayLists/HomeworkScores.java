@@ -83,13 +83,13 @@ public class HomeworkScores
         double lowestSoFar = scores[0];
 	int lowestIndex =0;
         for (int i = 1; i < currentSize; i++)
-        {
-            if (scores[i] < lowestSoFar)
-            {
-                lowestSoFar = scores[i];
-		lowestIndex = i;
-            }
-        }
+	    {
+		if (scores[i] < lowestSoFar)
+		    {
+			lowestSoFar = scores[i];
+			lowestIndex = i;
+		    }
+	    }
         return lowestIndex;	
     }
 
@@ -116,24 +116,24 @@ public class HomeworkScores
         int pos = 0;
         boolean found = false;
         while (pos < currentSize && !found)
-        {
-            if (scores[pos] == searchedValue)
-            {
-                found = true;
-            }
-            else
-            {
-                pos++;
-            }
-        }
+	    {
+		if (scores[pos] == searchedValue)
+		    {
+			found = true;
+		    }
+		else
+		    {
+			pos++;
+		    }
+	    }
         if (found)
-        {
-            return pos;
-        }
+	    {
+		return pos;
+	    }
         else
-        {
-            return -1;
-        }
+	    {
+		return -1;
+	    }
     }
 
     /**
@@ -144,12 +144,12 @@ public class HomeworkScores
     {
         double lowestSoFar = scores[0];
         for (int i = 1; i < currentSize; i++)
-        {
-            if (scores[i] < lowestSoFar)
-            {
-                lowestSoFar = scores[i];
-            }
-        }
+	    {
+		if (scores[i] < lowestSoFar)
+		    {
+			lowestSoFar = scores[i];
+		    }
+	    }
         return lowestSoFar;
     }
 
@@ -160,9 +160,9 @@ public class HomeworkScores
     public void remove(int pos)
     {
         for (int i = pos + 1; i < currentSize; i++)
-        {
-            scores[i - 1] = scores[i];
-        }
+	    {
+		scores[i - 1] = scores[i];
+	    }
         currentSize--;
     }
 
