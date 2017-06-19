@@ -55,9 +55,28 @@ public class GradeBook
 		totalGrades[n] += grades[n][topics];
 	    }
 	}
-	return totalGrades;
-    } 
-
+	return totalGrades
+    }
+    
+    /**
+     * Calculates the column totals (the sum of of all students'
+     * scores for one topic) for all topics in a completely filled array.
+     * The order of the topcs matches the order of the topic names in
+     * topicNames.
+     * @return a filled array of the total for each topic.
+     */
+    public double[] totalsForAllTopics()
+    {
+        //TODO: implement the totalsForAllTopics method.
+	double[] topicTotals = new double[numTopics];
+	for (int topic =0 ; topic < numTopics ; topic++) {
+	    for (int student = 0 ; student < numStudents; student++) {
+		topicTotals[topic] += grades[student][topic];
+	    }
+	}
+	return topicTotals;
+    }
+    
     //This method reads the scores from the file. Don't look inside.
     private void readScoresFromFile(String file)
     {
