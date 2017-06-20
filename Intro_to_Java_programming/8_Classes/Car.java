@@ -9,6 +9,7 @@ public class Car
 {
     private int numberOfSeats;
     private int numberOfPassengers;
+    private String driverName;
     private ArrayList<String> passengers;
 
     /**
@@ -18,6 +19,7 @@ public class Car
     public Car(int numberOfSeats)
     {
         this.numberOfSeats = numberOfSeats;
+	this.driverName = null;
 	this.passengers = new ArrayList<String>();
     }
 
@@ -43,6 +45,41 @@ public class Car
 	return numberOfPassengers;
     }
 
+    /**
+     * Gets the number of Occupants in car.
+     * @return the number of occupents
+     **/
+    public int getOccupantCount()
+    {
+	int count = passengers.size();
+	if (driverName != null){
+	    count++;
+	}
+	return count;
+    }
+
+    /**
+     * Sets the driver name .
+     * @param the drivers name 
+     **/
+    public void setDriverName(String driverName)
+    {
+	this.driverName = driverName;
+    }
+
+    /**
+     * gets the Driver Name.
+     * @return the drivers name
+     **/
+    public String getDriverName()
+    {
+	if (driverName != null) {
+	    return this.driverName;
+	}else {
+	    return "No Driver";
+	}
+    }
+    
     /**
      * Gts the list of all the passengers in th car.
      * @return a listof the form [name1, name2, ...]

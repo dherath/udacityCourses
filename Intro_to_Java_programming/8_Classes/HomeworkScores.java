@@ -35,7 +35,7 @@ public class HomeworkScores
         //     scores[currentSize] = score;
         //     currentSize++;
         // }
-	if (size ==0) {
+0	if (size ==0) {
 	    tempScore = score;
 	}else if (tempScore>=score) {
 	    tempScore = score;
