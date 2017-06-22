@@ -62,14 +62,16 @@ public class Car
     public void drive()
     {
         // Leave blank for now
-	while (this.location < this.destination ){
-	    for ( Person p : passengers){
-		if (p.getDestination()==this.location) {
-		    passengers.remove(p);
-		}
-	    }
-	    this.location++;
+        this.location++;
+
+	if (this.location > this.destination) {
+	    break;
 	}
 	
+	for (Person p : passengers) {
+	    if (p.getDestination()==this.location) {
+		passengers.remove(passengers.indexOf(p));
+	    }
+	}
     }
 }
