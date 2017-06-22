@@ -74,4 +74,10 @@ public class Car
 	    }
 	}
     }
+ 
+    public String toString()
+    {
+        return "Car[location=" + location + ",driverName=" + driverName + ",passengers=" + passengers + "]";
+    }
+    
 }
