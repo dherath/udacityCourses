@@ -68,7 +68,22 @@ public class Simulation
     */
     public void driveCars()
     {
-        // Leave blank for now
+	// Complete this method
+        // To be graded as correct, go through the cars in order
+        // and drive each one until it arrives before going to the
+        // next car in the array. // Leave blank for now
+	while (cars.size()>0) {
+	    for (int i = 0; i<cars.size(); i++){
+		Car c = cars.get(i);
+		c.drive();
+		if(c.hasArrived()){
+		    cars.remove(i);
+		}else{
+		    i++;
+		}
+	    }
+	}
+	
     }
     
     public String toString()
