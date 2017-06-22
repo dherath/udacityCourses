@@ -61,16 +61,14 @@ public class Car
     */
     public void drive()
     {
-        // Leave blank for now
-        this.location++;
-
-	if (this.location > this.destination) {
-	    break;
-	}
-	
-	for (Person p : passengers) {
-	    if (p.getDestination()==this.location) {
-		passengers.remove(passengers.indexOf(p));
+	this.location++;
+	int i =0 ;
+	while (i < passengers.size()){
+	    Person p = passengers.get(i);
+	    if (p.getDestination()== this.location){
+		passengers.remove(i);
+	    } else {
+		i++;
 	    }
 	}
     }
