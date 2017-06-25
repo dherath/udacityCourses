@@ -20,6 +20,7 @@ public class ArrayUtil
             for (int j=0; j<matrix[0].length; j++){
                 System.out.printf("%6d",matrix[i][j]);
             }
+	    System.out.println();
         }
     }
 
