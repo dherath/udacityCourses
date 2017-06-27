@@ -69,4 +69,26 @@ public class WindowShape
     // TODO: Write a static method that takes the width and height of the rectangle
     // as parameters and returns the area of a rectangle wiht those dimensions and with a
     // semi-circle on top.
+    /**
+     * Returns the area of window
+     * @return the area
+     **/
+    public double area()
+    {
+	double r = this.width/2.0;
+	double area = Math.PI*Math.Pow(r,2.0) + this.width*this.height;
+	return area;
+    }
+
+    /**
+     * Returns area from a static methods
+     * @param the width(w) and height(h)
+     * @return the area 
+     **/
+    public static double area(double w, double h)
+    {
+	double r = w/2.0;
+	double area = Math.PI*Math.Pow(r,2.0) + this.width*this.height;
+	return area;
+    }
 }
