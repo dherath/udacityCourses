@@ -75,8 +75,8 @@ public class WindowShape
      **/
     public double area()
     {
-	double r = this.width/2.0;
-	double area = Math.PI*Math.Pow(r,2.0) + this.width*this.height;
+	double r = this.w/2.0;
+	double area = Math.PI*Math.Pow(r,2.0) + this.w*this.h;
 	return area;
     }
 
@@ -88,7 +88,7 @@ public class WindowShape
     public static double area(double w, double h)
     {
 	double r = w/2.0;
-	double area = Math.PI*Math.Pow(r,2.0) + this.width*this.height;
+	double area = Math.PI*Math.Pow(r,2.0) + this.w*this.h;
 	return area;
     }
 }
