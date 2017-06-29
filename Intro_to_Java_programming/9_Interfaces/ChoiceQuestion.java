@@ -41,7 +41,7 @@ public class ChoiceQuestion extends Question
 
     public void display()
     {
-        System.out.println("..."); // We'll fix this later
+	super.display();
         // Display the answer choices
         for (int i = 0; i < choices.size(); i++)  {
 	    int choiceNumber = i + 1;
