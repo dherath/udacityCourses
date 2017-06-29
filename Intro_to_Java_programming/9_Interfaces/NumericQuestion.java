@@ -10,7 +10,8 @@ public class NumericQuestion
 {
     private double tolerance;
     // TODO: Provide any needed instance variables
-
+    private double answer;
+    
     /**
        Constructs a numeric question.
        @param aTolerance the tolerance that is allowed when
@@ -25,6 +26,8 @@ public class NumericQuestion
     public void setAnswer(double number)
     {
         // TODO: Implement this method
+	this.answer = number;
+	
     }
 
     public boolean checkAnswer(String response)
@@ -34,5 +37,7 @@ public class NumericQuestion
         // containing digits and a decimal point
         // into a floating-point number. For example,
         // Double.parseDouble("3.14") is 3.14.
+	double value = Double.parseDouble(response);
+	return Math.abs(value-this.answer)<=this.tolerance;
     }
 }
