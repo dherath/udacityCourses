@@ -23,6 +23,7 @@ public class Scene
         elements.add(new Dog(100, 400, "Rex.jpg"));
         elements.add(new Dog(200, 400, "Lucky.jpg"));
 
+	elements.add(new Ball(400,400,Color.red));
         // // TODO: Change to a single loop
         // for (Car c : cars)
         // {
