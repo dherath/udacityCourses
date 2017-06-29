@@ -26,15 +26,27 @@ public class ChoiceQuestion extends Question
     */
     public void addChoice(String choice, boolean correct)
     {
-        // TODO: Add choice to choices.
-        // Ignore the "correct" parameter for now
-	choices.add(choice);
+        choices.add(choice);
+
+        // TODO: If this is the correct choice,
+        // set the choice number (1, 2, 3, 4) as the answer.
+        // Tip #1: What's choices.size()?
+        // Tip #2: Use "" + n to change n to a string
+
+	if (correct) {
+	    String choiceString = "" + choices.size();
+	    setAnswer(choiceString);
+	}
     }
 
     public void display()
     {
-        // For now, just print the choices
-        System.out.println(choices);
+        System.out.println("..."); // We'll fix this later
+        // Display the answer choices
+        for (int i = 0; i < choices.size(); i++)  {
+	    int choiceNumber = i + 1;
+	    System.out.println(choiceNumber + ": " + choices.get(i));
+	}
     }
 }
 
