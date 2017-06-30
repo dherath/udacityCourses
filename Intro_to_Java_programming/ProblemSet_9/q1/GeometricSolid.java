@@ -14,5 +14,6 @@
 
 public interface GeometricSolid
 {
-
+    double getVolume();
+    double getSurfaceArea();
 }

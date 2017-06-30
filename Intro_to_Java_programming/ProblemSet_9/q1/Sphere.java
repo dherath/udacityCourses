@@ -35,5 +35,24 @@ public class Sphere implements GeometricSolid
     }
 
     //other methods
+    /**
+     * finds volume
+     * @return the volume
+     **/
+    public double getVolume()
+    {
+	double r = this.getRadius();
+	return (4.0/3.0)*Math.PI*Math.pow(r,3.0);
+    }
+
+    /**
+     * finds surface Area
+     * @return the surface area
+     **/
+    public double getSurfaceArea()
+    {
+	double r = this.getRadius();
+	return 4.0*Math.PI*Math.pow(r,2.0);
+    }
 
 }

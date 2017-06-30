@@ -1,6 +1,6 @@
 //This is provided for reference.  You don't need to change this.
 
-public class InterfaceTester
+public class InterfaceTester 
 {
    public static void main(String[] args)
    {
