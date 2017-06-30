@@ -11,7 +11,7 @@ public class VoltageDividerAmplifier extends Amplifier
      **/
     public VoltageDividerAmplifier(int r1, int r2)
     {
-	super(r1,r2);
+        super(r1,r2);
     }
 
     /**
@@ -20,9 +20,9 @@ public class VoltageDividerAmplifier extends Amplifier
      **/
     public double getGain()
     {
-	if (super.getR1()==0 && super.getR2()==0){
-	    return super.getGain();
-	}
-	return ( (double) (super.getR2()) / (super.getR1() + super.getR2()));
+        if (super.getR1()==0 && super.getR2()==0){
+            return super.getGain();
+        }
+        return ( (double) (super.getR2()) / (super.getR1() + super.getR2()));
     }
 }
