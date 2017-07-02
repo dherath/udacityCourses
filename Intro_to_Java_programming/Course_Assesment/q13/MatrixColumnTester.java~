@@ -15,19 +15,5 @@ public class MatrixColumnTester
        matrix = new Matrix(array);
        System.out.println(matrix.numberOfColumns());
        System.out.println("Expected: 5");
-
-       int[][] array1 = { {1, 2, 3, 4},
-			 {7, 8, 9, 10},
-			 {2, 4, 6, 8}
-       };
-       Matrix matrix1 = new Matrix(array1);
-       System.out.println(matrix1.numberOfRows());
-       System.out.println("Expected: 3");
-       
-
-       array1 = new int[10][5];
-       matrix1 = new Matrix(array1);
-       System.out.println(matrix1.numberOfRows());
-       System.out.println("Expected: 10");
-    }
+     }
 }

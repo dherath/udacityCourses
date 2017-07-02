@@ -30,4 +30,13 @@ public class Matrix
 	return this.matrix[0].length;
     }
 
+    /**
+     * gets the number of rows
+     * @return the number of rows
+     */
+    public int numberOfRows()
+    {
+	return this.matrix.length;
+    }
+
 }
