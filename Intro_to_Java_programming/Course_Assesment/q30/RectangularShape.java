@@ -25,16 +25,16 @@ public class RectangularShape
 {
    public String squareTester(Rectangle box)
    {
-      int width = Rectangle.getWidth();
-      int height = getHeight();
+      int width = box.getWidth();
+      int height = box.getHeight();
       String message = "";
-      if (width = height)
+      if (width == height)
       {
           message = "It is a square";
       }
       else
       {
-          message = "It is a square";
+          message = "It is not a square";
       }
       return message;
    }
