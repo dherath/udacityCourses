@@ -18,4 +18,18 @@ weights = torch.randn_like(features) # 5 weights to match the #features
 bias = torch.randn((1,1)) # the bias value
 
 output = activation(torch.sum(features*weights)+bias)
+#output2 = activation(torch.sum(torch.mm(features,weights.flip(0)),bias))
+
+output2 = activation((features*weights).sum()+ bias)
+
+output3 = activation(torch.sum(torch.mm(features,weights.view(5,1)))+bias)
+
+
+#--------- torch.matmul() --------
+
+
+
 print(output)
+print(output2)
+print(output3)
+#print("output: "+output+" output2: "+output2)
